@@ -11,7 +11,7 @@ Feedback and bug reports are appreciated.
 
 PHP 5.2.x
 cURL
-WooCommerce 2.2 at least on the store
+WooCommerce 2.5 at least on the store
 
 ## Getting started
 
