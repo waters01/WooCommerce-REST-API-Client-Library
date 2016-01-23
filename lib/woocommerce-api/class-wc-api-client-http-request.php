@@ -206,8 +206,11 @@ class WC_API_Client_HTTP_Request {
 					$parsed_response->errors->code
 				);
 			}
-
-			throw new WC_API_Client_HTTP_Exception( sprintf( 'Error: %s [%s]', $error_message, $error_code ), $this->response->code, $this->request, $this->response);
+			
+			// Stop throwing exceptions when sku isn't found
+			if($error_code!="woocommerce_api_invalid_product_sku"){
+				throw new WC_API_Client_HTTP_Exception( sprintf( 'Error: %s [%s]', $error_message, $error_code ), $this->response->code, $this->request, $this->response);
+			}
 		}
 
 		return $this->build_result( $parsed_response );
