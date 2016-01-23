@@ -2,13 +2,13 @@
 /**
  * WC API Client
  *
- * @since 2.0
+ * @since 3.0
  */
 class WC_API_Client {
 
 
 	/** API client version */
-	const VERSION = '2.0.1';
+	const VERSION = '3.0.0';
 
 	/** @var string store URL, e.g. http://www.woothemes.com */
 	public $store_url;
