@@ -1,4 +1,6 @@
 ## Changelog
+**version 3.0.0 - 2016-01-23**
+- Add support for v3 API and creating / updating product categories
 
 **version 2.0.1 - 2015-07-13**
 - Fix composer configuration
