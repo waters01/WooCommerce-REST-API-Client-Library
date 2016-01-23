@@ -70,7 +70,8 @@ abstract class WC_API_Client_Resource {
 		// a convenience for client code so creating/updating resources doesn't need a
 		// nested array like array( 'order_note' => array( 'note' => 'foo' ) ) and can instead
 		// use array( 'note' => 'foo' ) ʘ‿ʘ
-		if ( $this->request_body && ! isset( $args['body'][ $this->object_namespace ] ) ) {
+		// prevent 'product' namespace from being added to product_category call
+		if ( $this->request_body && ! isset( $args['body'][ $this->object_namespace ] ) && sizeof( $args['body']['product_category'] )==0 ) {
 
 			$this->request_body = array(
 				$this->object_namespace => $this->request_body,
